@@ -424,6 +424,7 @@
   .about-copy h2{
     margin-top:0;
     max-width:600px;
+    overflow-wrap:break-word;
   }
   .section-head .desc{
     max-width:340px;
@@ -915,7 +916,7 @@
   .contact{background:var(--bg-elevated);border-top:1px solid var(--line);}
   .contact-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
     gap:0;
     border:1px solid var(--line);
   }
@@ -1423,10 +1424,10 @@
     .burger{display:flex;}
     .phone-link{display:none;}
     .header-actions .btn{display:none;}
-    .about-grid{grid-template-columns:1fr;gap:32px;}
+    .about-grid{grid-template-columns:minmax(0,1fr);gap:32px;}
     .about-pull{position:static;padding-bottom:32px;margin-bottom:8px;border-bottom:1px solid var(--line);}
-    .about-lines{grid-template-columns:1fr;gap:16px;}
-    .svc-grid{grid-template-columns:1fr;grid-template-rows:none;}
+    .about-lines{grid-template-columns:minmax(0,1fr);gap:16px;}
+    .svc-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:none;}
     .svc-card:nth-child(1),
     .svc-card:nth-child(2),
     .svc-card:nth-child(3){grid-column:1;grid-row:auto;}
@@ -1436,16 +1437,16 @@
     .lightbox-nav.prev{left:10px;}
     .lightbox-nav.next{right:10px;}
     .value-secondary{flex-direction:column;}
-    .rev-grid{grid-template-columns:1fr;gap:18px;}
+    .rev-grid{grid-template-columns:minmax(0,1fr);gap:18px;}
     .rev-card-anchor{margin-bottom:20px;}
     .trust-strip .wrap{grid-template-columns:repeat(2,1fr);}
     .trust-item{border-left:none;border-top:1px solid var(--line);padding:24px 0;}
     .trust-item:nth-child(1),.trust-item:nth-child(2){border-top:none;}
-    .contact-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:minmax(0,1fr);}
     .contact-form{border-right:none;border-bottom:1px solid var(--line);}
     .section-pad{padding:80px 0;}
     .section-head{flex-direction:column;align-items:flex-start;gap:16px;}
-    .footer-top{grid-template-columns:1fr;gap:40px;padding:64px 0 48px;}
+    .footer-top{grid-template-columns:minmax(0,1fr);gap:40px;padding:64px 0 48px;}
     .footer-cta{padding-right:0;}
     .footer-cols{grid-template-columns:repeat(3,1fr);gap:24px;border-left:none;padding-left:0;}
   }
@@ -1454,27 +1455,27 @@
     .hero{padding-top:96px;}
     .hero-cta{margin-bottom:40px;}
     .hero-cta .btn{flex:1;}
-    .pkg-prices{grid-template-columns:1fr;gap:10px;}
+    .pkg-prices{grid-template-columns:minmax(0,1fr);gap:10px;}
     .pkg-price-row{display:flex;align-items:center;justify-content:space-between;text-align:left;}
     .pkg-price-row span{margin-bottom:0;}
-    .svc-grid{grid-template-columns:1fr;}
-    .portfolio-grid{grid-template-columns:1fr;}
+    .svc-grid{grid-template-columns:minmax(0,1fr);}
+    .portfolio-grid{grid-template-columns:minmax(0,1fr);}
     .value-item.featured{flex-direction:column;align-items:flex-start;}
     .value-item.featured .value-stat{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:20px;text-align:left;margin-top:4px;width:100%;}
-    .value-cluster{grid-template-columns:1fr;}
+    .value-cluster{grid-template-columns:minmax(0,1fr);}
     .value-cluster .value-item:nth-child(1),
     .value-cluster .value-item:nth-child(2),
     .value-cluster .value-item:nth-child(3){border-right:none;border-bottom:1px solid var(--line);}
     .about-links{gap:20px;}
     .contact-form,.contact-info{padding:30px 22px;}
     .hero-trust{gap:14px;}
-    .footer-cols{grid-template-columns:1fr;gap:32px;}
+    .footer-cols{grid-template-columns:minmax(0,1fr);gap:32px;}
     .footer-bottom{flex-direction:column;align-items:flex-start;gap:16px;}
     .site-modal{padding:0;}
     .site-modal-panel{max-width:none;max-height:100vh;height:100vh;border-radius:0;border:none;margin:0;}
     .site-modal-body{padding:64px 22px 32px;}
-    .job-row{grid-template-columns:1fr;gap:4px;}
-    .training-facts{grid-template-columns:1fr 1fr;}
+    .job-row{grid-template-columns:minmax(0,1fr);gap:4px;}
+    .training-facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
   }
 </style>
 

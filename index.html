@@ -1462,9 +1462,13 @@
        a wide desktop frame. Cut the sub line, tighten the rhythm, and re-tune
        the media crop/overlay so the car actually reads on a portrait screen. */
     .hero{padding-top:84px;}
+    /* Push the CTAs + trust line down toward the bottom of the hero instead of
+       sitting right under the headline - frees the middle of the frame so the
+       car isn't immediately covered by buttons on a short portrait screen. */
+    .hero-content{flex:1;display:flex;flex-direction:column;}
     .hero h1{margin-bottom:18px;}
     .hero-sub{display:none;}
-    .hero-cta{margin-bottom:28px;}
+    .hero-cta{margin-top:auto;margin-bottom:28px;}
     .hero-cta .btn{flex:1;}
     .hero-trust{gap:10px;row-gap:6px;}
     .hero-media video,

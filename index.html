@@ -334,6 +334,10 @@
     margin-top:auto;
     padding-top:40px;
     user-select:none;
+    /* On narrow screens the wordmark is wider than the viewport and gets clipped
+       by overflow:hidden; fade it out at the edge instead of hard-cropping mid-letter. */
+    -webkit-mask-image:linear-gradient(to right, black 78%, transparent 98%);
+    mask-image:linear-gradient(to right, black 78%, transparent 98%);
   }
   .hero-mark span{
     display:block;

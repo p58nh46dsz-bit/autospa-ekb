@@ -111,7 +111,12 @@
   .wrap{
     max-width:var(--container);
     margin:0 auto;
-    padding:0 32px;
+    /* padding-left/right only, never the shorthand: several sections (the
+       footer in particular) carry .wrap alongside a class that sets its own
+       vertical padding, and a "0 Npx" shorthand here would silently zero
+       that out since this rule wins on equal specificity by source order. */
+    padding-left:32px;
+    padding-right:32px;
   }
 
   /* ================= HEADER ================= */
@@ -1425,7 +1430,7 @@
 
   /* ================= RESPONSIVE ================= */
   @media (max-width:980px){
-    .wrap{padding:0 24px;}
+    .wrap{padding-left:24px;padding-right:24px;}
     .as-nav{display:none;}
     .burger{display:flex;}
     .phone-link{display:none;}
@@ -1456,7 +1461,7 @@
     .footer-cols{grid-template-columns:repeat(3,1fr);gap:24px;border-left:none;padding-left:0;}
   }
   @media (max-width:640px){
-    .wrap{padding:0 18px;}
+    .wrap{padding-left:18px;padding-right:18px;}
     /* Hero gets its own pass here: stacked h1 + sub + two CTAs + trust line was
        eating the whole viewport and burying the car behind a gradient tuned for
        a wide desktop frame. Cut the sub line, tighten the rhythm, and re-tune

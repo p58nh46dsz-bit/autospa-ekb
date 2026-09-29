@@ -1489,7 +1489,11 @@
     .contact-form,.contact-info{padding:30px 22px;}
     .hero-trust{gap:14px;}
     .footer-cols{grid-template-columns:minmax(0,1fr);gap:32px;}
-    .footer-bottom{flex-direction:column;align-items:flex-start;gap:16px;}
+    /* Stacked, same-size muted text with no other differentiation reads as one
+       glued block without a clear break - give the two groups their own space
+       and a hairline to actually separate them, not just a small gap value. */
+    .footer-bottom{flex-direction:column;align-items:flex-start;gap:20px;}
+    .footer-bottom-links{padding-top:20px;border-top:1px solid var(--line);width:100%;}
     .site-modal{padding:0;}
     .site-modal-panel{max-width:none;max-height:100vh;height:100vh;border-radius:0;border:none;margin:0;}
     .site-modal-body{padding:64px 22px 32px;}
